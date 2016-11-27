@@ -10,7 +10,7 @@ class Main extends MY_Controller {
 		if (!$this->ion_auth->logged_in())
 		{
 			// redirect them to the login page
-			redirect('admin/logon/login', 'refresh');
+			//redirect('admin/logon/login', 'refresh');
 		}
 	}
 
@@ -32,19 +32,22 @@ class Main extends MY_Controller {
 	public function index()
 	{
 
-		$this->template->stylesheet->add('lib/css/bootstrap.css');
-		$this->template->stylesheet->add('lib/css/font-awesome.css');
-		$this->template->stylesheet->add('lib/css/custom.css');
+		// Load a view in the content partial
+        // $this->template->content->view('default/home');
 
-		$this->template->javascript->add('lib/js/jquery-1.10.2.js');
-        $this->template->javascript->add('lib/js/bootstrap.min.js');
-        $this->template->javascript->add('lib/js/jquery.metisMenu.js');
-        $this->template->javascript->add('lib/js/custom.js');
+        // $this->template->content->view('default/portfolio');
+        // $this->template->content->view('default/about');
+        $this->template->content->view('main/index');
+        
+        // Set a partial's content
+        // $this->template->footer = 'Criado com Twitter Bootstrap';
+        
+        // Publish the template
+        $this->template->publish('theme/layout');
 
-		// $this->load->view('welcome_message');
-		$this->template->content->view('main_index');
+        /*****/
 
-		$this->template->publish();
+		// $this->layout('layout')->view('main/index')->render();
 		
 	}
 }

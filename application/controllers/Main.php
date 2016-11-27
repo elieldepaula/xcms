@@ -29,15 +29,6 @@ class Main extends MY_Controller {
         // Set the title
         $this->template->title = "Base App";
 
-        // Dynamically add a css stylesheet
-        $this->template->stylesheet->add('assets/css/bootstrap.css');
-        $this->template->stylesheet->add('assets/font-awesome-4.1.0/css/font-awesome.min.css');
-        $this->template->stylesheet->add('assets/css/style.css');
-        $this->template->javascript->add('assets/plugins/jquery-1.10.2.js');
-        $this->template->javascript->add('assets/plugins/bootstrap.js');
-        $this->template->javascript->add('assets/plugins/jquery.easing.min.js');
-        $this->template->javascript->add('assets/js/custom.js');
-
     }
 
 	public function index()
