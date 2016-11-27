@@ -1,0 +1,18 @@
+Usando:
+=================
+
+CodeIgniter HMVC Modules: https://github.com/jenssegers/codeigniter-hmvc-modules
+Codeigniter Template Library: https://github.com/jenssegers/codeigniter-template-library
+MY_Model class: https://github.com/lonnieezell/my_model
+MY_Controller class: https://github.com/lonnieezell/my_controller
+Ion-Auth library: https://github.com/benedmunds/CodeIgniter-Ion-Auth
+
+Testar:
+=================
+https://github.com/jenssegers/codeigniter-advanced-images
+https://github.com/jenssegers/codeigniter-message-library
+
+
+TODO:
+=================
+Verificar a ativação do profiler em MY_Controller()
