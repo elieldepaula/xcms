@@ -33,19 +33,30 @@ class Main extends MY_Controller {
 
 	public function index()
 	{
-		
-        // Load a view in the content partial
-        $this->template->content->view('default/home');
 
-        $this->template->content->view('default/portfolio');
-        $this->template->content->view('default/about');
-        $this->template->content->view('default/contact');
+        // $view = !empty($this->use_view) ? $this->use_view : $this->router->fetch_class() .'/'. $this->router->fetch_method();
+		
+        // // Load a view in the content partial
+        // $this->template->content->view('default/home');
+
+        // $this->template->content->view('default/portfolio');
+        // $this->template->content->view('default/about');
+        // $this->template->content->view('default/contact');
         
-        // Set a partial's content
-        $this->template->footer = 'Criado com Twitter Bootstrap';
+        // // Set a partial's content
+        // $this->template->footer = 'Criado com Twitter Bootstrap';
         
-        // Publish the template
-        $this->template->publish();
+        // // Publish the template
+        // // $this->template->publish();
+
+        // echo $view;
+        $this->render();
 	}
+
+    public function contact()
+    {
+        $view = !empty($this->use_view) ? $this->use_view : $this->router->fetch_class() .'/'. $this->router->fetch_method();
+        echo $view;
+    }
 
 }
