@@ -11,5 +11,5 @@
 */
 
 $config['parser']    = FALSE;
-$config['template']  = 'default/template';
+$config['template']  = 'theme/layout';
 $config['cache_ttl'] = 0;

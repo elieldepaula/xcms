@@ -22,17 +22,17 @@ class Main extends Authenticated_Controller {
         // $this->template->content->view('default/home');
 
         // $this->template->content->view('default/portfolio');
-        // $this->template->content->view('default/about');
-        // $this->template->content->view('main/index');
+        // $this->template->content->view('main/about');
+        $this->template->content->view('main/index');
         
         // Set a partial's content
         // $this->template->footer = 'Criado com Twitter Bootstrap';
         
         // Publish the template
-        // $this->template->publish('theme/layout');
+        $this->template->publish();//'theme/layout');
 
         // echo $view;
-        $this->render();
+        // $this->render();
 
         /*****/
 

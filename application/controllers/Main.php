@@ -27,36 +27,43 @@ class Main extends MY_Controller {
         $this->show_profiler = TRUE;
 
         // Set the title
-        $this->template->title = "Base App";
+        // $this->template->title = "Base App";
 
     }
 
 	public function index()
 	{
+        /*
+        // Setar variáveis.
+        $this->set_var('titulo_site', 'Desenvolvimento');
+        $this->set_var('rodape_site', 'Criado por Eliel de Paula');
+        $this->set_var('titulo_portfolio', 'Nosso Portfolio');
 
-        // $view = !empty($this->use_view) ? $this->use_view : $this->router->fetch_class() .'/'. $this->router->fetch_method();
-		
-        // // Load a view in the content partial
-        // $this->template->content->view('default/home');
+        // Adicionar views extras.
+        // $this->set('main/contact', null, true); // Anula a view principal
+        // $this->prepend('main/portfolio'); // Anexa antes da view principal
+        $this->append('main/about'); // Anexa depois da view principal
+        $this->append('main/portfolio'); // Anexa depois da view principal
+        $this->append('main/portfolio'); // Anexa depois da view principal
+        $this->append('main/contact'); // Anexa depois da view principal
+        $this->render(); // index
+        */
+        $this->template->titulo_site = 'Biblioteca Template';
+        $this->template->rodape_site = 'Desenvolvido por Eliel de Paula';
+        $this->template->titulo_portfolio = 'Portifa!';
+        $this->template->content->view('main/index');
+        $this->template->content->view('main/portfolio');
+        $this->template->content->view('main/about');
+        $this->template->content->view('main/contact');
+        $this->template->publish();
 
-        // $this->template->content->view('default/portfolio');
-        // $this->template->content->view('default/about');
-        // $this->template->content->view('default/contact');
-        
-        // // Set a partial's content
-        // $this->template->footer = 'Criado com Twitter Bootstrap';
-        
-        // // Publish the template
-        // // $this->template->publish();
-
-        // echo $view;
-        $this->render();
 	}
 
     public function contact()
     {
-        $view = !empty($this->use_view) ? $this->use_view : $this->router->fetch_class() .'/'. $this->router->fetch_method();
-        echo $view;
+        // $view = !empty($this->use_view) ? $this->use_view : $this->router->fetch_class() .'/'. $this->router->fetch_method();
+        // echo $view;
+        $this->render();
     }
 
 }
