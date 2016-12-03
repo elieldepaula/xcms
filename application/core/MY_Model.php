@@ -718,7 +718,7 @@ class MY_Model extends CI_Model {
 
         if ($this->soft_deletes)
         {
-            $sets = $this->log_user ? array($this->soft_delete_key => 1, $this->deleted_by_field => $this->auth->user_id()) : array($this->soft_delete_key => 1);
+            $sets = $this->log_user ? array($this->soft_delete_key => 1, $this->deleted_by_field => $this->ion_auth->get_user_id()) : array($this->soft_delete_key => 1);
 
             $result = $this->dbw->update($this->_table, $sets);
         }
@@ -744,7 +744,7 @@ class MY_Model extends CI_Model {
 
         if ($this->soft_deletes)
         {
-            $sets = $this->log_user ? array($this->soft_delete_key => 1, $this->deleted_by_field => $this->auth->user_id()) : array($this->soft_delete_key => 1);
+            $sets = $this->log_user ? array($this->soft_delete_key => 1, $this->deleted_by_field => $this->ion_auth->get_user_id()) : array($this->soft_delete_key => 1);
 
             $result = $this->dbw->update($this->_table, $sets);
         }
@@ -776,7 +776,7 @@ class MY_Model extends CI_Model {
 
         if ($this->soft_deletes)
         {
-            $sets = $this->log_user ? array($this->soft_delete_key => 1, $this->deleted_by_field => $this->auth->user_id()) : array($this->soft_delete_key => 1);
+            $sets = $this->log_user ? array($this->soft_delete_key => 1, $this->deleted_by_field => $this->ion_auth->get_user_id()) : array($this->soft_delete_key => 1);
 
             $result = $this->dbw->update($this->_table, $sets);
         }

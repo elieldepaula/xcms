@@ -52,8 +52,6 @@ class Auth extends MY_Controller
 				'placeholder' => 'Senha',
 			);
 
-			// $this->_render_page('auth/login', $this->data);
-
 			//************//
 
 			$this->template->stylesheet->add('lib/css/bootstrap.css');
