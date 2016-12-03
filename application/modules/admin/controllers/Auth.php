@@ -1,6 +1,6 @@
 <?php
 
-class Logon extends MY_Controller
+class Auth extends MY_Controller
 {
 
 	public function login()
@@ -66,9 +66,9 @@ class Logon extends MY_Controller
 	        $this->template->javascript->add('lib/js/custom.js');
 
 			// $this->load->view('welcome_message');
-			$this->template->content->view('logon/login', $this->data);
+			$this->template->content->view('auth/login', $this->data);
 
-			$this->template->publish('logon/template'); // Passa um template diferente para o login.
+			$this->template->publish('auth/template'); // Passa um template diferente para o login.
 
 		}
 	}
@@ -82,7 +82,7 @@ class Logon extends MY_Controller
 
 		// redirect them to the login page
 		$this->session->set_flashdata('message', 'Logout efetuado com sucesso.');
-		redirect('admin/logon/login');
+		redirect('admin/auth/login');
 
 	}
 }

@@ -25,7 +25,7 @@
 	                <div class="navbar-collapse collapse">
 	                    <ul class="nav navbar-nav navbar-right">
 	                        <li><?= anchor('', 'Website', array('target' => '_blank')); ?></li>
-	                        <li><?= anchor('admin/logon/logout', 'Sair'); ?></li>
+	                        <li><?= anchor('admin/auth/logout', 'Sair'); ?></li>
 	                    </ul>
 	                </div>
 	            </div>
