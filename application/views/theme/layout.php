@@ -11,8 +11,8 @@
         <title><?= $this->template->titulo_site; ?></title>
         <!-- Meta tag aqu -->
 
-        <?= get_asset('css', 'bootstrap.css'); ?>
-        <?= get_asset('css', 'font-awesome.min.css'); ?>
+        <?= get_asset('css', 'bootstrap.min.css', 'lib'); ?>
+        <?= get_asset('css', 'font-awesome.min.css', 'lib'); ?>
         <?= get_asset('css', 'style.css'); ?>
            
         <!-- GOOGLE FONT -->
@@ -54,9 +54,9 @@
         </div>
         <!--FOOTER SECTION-->
 
-        <?= get_asset('js', 'jquery-1.10.2.js'); ?>
-        <?= get_asset('js', 'bootstrap.js'); ?>
-        <?= get_asset('js', 'jquery.easing.min.js'); ?>
+        <?= get_asset('js', 'jquery-1.10.2.js', 'lib'); ?>
+        <?= get_asset('js', 'bootstrap.min.js', 'lib'); ?>
+        <?= get_asset('js', 'jquery.easing.min.js', 'lib'); ?>
         <?= get_asset('js', 'custom.js'); ?>
 
     </body>

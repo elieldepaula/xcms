@@ -35,10 +35,13 @@
 	            <div class="sidebar-collapse">
 	                <ul class="nav" id="main-menu">
 	                    <li class="text-center user-image-back">
-	                        <img src="../lib/img/find_user.png" class="img-responsive" />
+	                        <img src="<?= base_url('lib/img/find_user.png'); ?>" class="img-responsive" />
 	                    </li>
 	                    <li>
-	                        <a href="index.html"><i class="fa fa-desktop "></i>Dashboard</a>
+	                    	<?= anchor('admin', '<i class="fa fa-desktop "></i> Dashboard'); ?>
+	                    </li>
+	                    <li>
+	                    	<?= anchor('admin/users', '<i class="fa fa-users "></i> Usuários'); ?>
 	                    </li>
 	                    <li>
 	                        <a href="#"><i class="fa fa-edit "></i>UI Elements<span class="fa arrow"></span></a>
@@ -106,7 +109,6 @@
 	        <!-- /. NAV SIDE  -->
 	        <div id="page-wrapper">
 	            <div id="page-inner">
-	            	<?php //= $view_content ?>
 	            	<?= $this->template->content; ?>
 	            </div>
 	            <!-- /. PAGE INNER  -->
